@@ -10,8 +10,16 @@ class ListCustomer extends Component
 
     public $customers = [];
 
-    public function mount(){
+    public function mount()
+    {
         $this->customers = customer::all();
+    }
+
+    public function deleteCustomer(customer $cus)
+    {
+        $cus->delete();
+        session()->flash('success', "Customer deleted successfully");
+        return $this->redirect('/list', navigate: true);
     }
 
     public function render()

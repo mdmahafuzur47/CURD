@@ -29,7 +29,8 @@
                                 class="text-blue-600 hover:text-blue-800">View</button>
                             <button wire:navigate href="/edit/{{$customer->id}}"
                                 class="text-blue-600 hover:text-blue-800 ml-4">Edit</button>
-                            <button class="text-red-600 hover:text-red-800 ml-4">Delete</button>
+                            <button wire:click="deleteCustomer({{$customer->id}})"
+                                class="text-red-600 hover:text-red-800 ml-4">Delete</button>
                         </td>
                     </tr>
                 @endforeach
