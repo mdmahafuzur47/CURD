@@ -1,7 +1,7 @@
 <div class="max-w-lg  mx-auto bg-white p-6 rounded-lg shadow-md">
     <h2 class="text-xl font-semibold mb-4">Contact Form</h2>
 
-    <form wire:submit.prevent='submit'>
+    <form wire:submit.prevent='updateCustomer'>
         <div class="mb-4">
             <label class="block text-gray-700">Name</label>
             <input type="text" wire:model='name'
@@ -32,7 +32,7 @@
             <button wire:navigate href="/list/"
                 class="w-full bg-gray-600 text-white py-2 rounded-lg hover:bg-gray-700">back</button>
             <button type="submit"
-                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Submit</button>
+                class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">update</button>
         </div>
     </form>
 </div>
